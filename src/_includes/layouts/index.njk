@@ -11,7 +11,7 @@ layout: layouts/base.njk
 					<div class="{{ dataCssClass }} text-xl pb-5">
 						{{ data["title_" + page.lang] | md | safe }}
 					</div>
-					<div class="border-2 border-stone-900">
+					<div class="border-2 border-stone-800">
 						<a href="{{ data["url_" + page.lang] }}">
 							{% image "src/" + data["image"], data["name"] %}
 						</a>
