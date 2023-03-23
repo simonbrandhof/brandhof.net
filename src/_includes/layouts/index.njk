@@ -13,7 +13,7 @@ layout: layouts/base.njk
 					</div>
 					<div class="border-2 border-stone-800">
 						<a href="{{ data["url_" + page.lang] }}">
-							{% image "src/" + data["image"], data["name"] %}
+							<img src="{{ data["image"] }}" alt="{{ data["name"] }}">
 						</a>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 ---
-layout: layouts/blank.njk
+layout: layouts/skeleton.njk
 eleventyExcludeFromCollections: true
 ---
 <script>
@@ -20,12 +20,12 @@ eleventyExcludeFromCollections: true
 	window.location.href = path;
 </script>
 <noscript>
-<div class="flex flex-row p-10 gap-5">
-	<div>Select your language:</div>
-	{% for l in site.languages -%}
-		<div>
-			<a href="/{{ l }}" lang="{{ l }}" class="underline hover:decoration-double">{{ messages[l].language }}</a>
-		</div>
-	{%- endfor %}
-</div>
+  <div class="flex flex-row p-10 gap-5">
+    <div>Select your language:</div>
+    {% for l in site.languages -%}
+      <div>
+        <a href="/{{ l }}" lang="{{ l }}" class="underline hover:decoration-double">{{ messages[l].language }}</a>
+      </div>
+    {%- endfor %}
+  </div>
 </noscript>

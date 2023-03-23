@@ -2,20 +2,30 @@
   "name": "www.brandhof.net",
   "version": "0.1.0",
   "scripts": {
-    "build": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/_includes/css/tailwind.css -c tailwind.config.js -o build/css/style.css --minify",
-    "clean": "rm -rf build",
-    "cms": "npx netlify-cms-proxy-server",
-    "serve": "npx @11ty/eleventy --serve & npx tailwindcss -i src/_includes/css/tailwind.css -c tailwind.config.js -o build/css/style.css --watch"
-  },
-  "engines": {
-    "node": "19"
+    "build": "run-s build:eleventy build:postcss",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
+    "build:postcss": "NODE_ENV=production postcss src/_includes/css/*.css --dir _site",
+    "clean": "rm -Rf ./_site/",
+    "start": "run-p start:*",
+    "start:cms": "npx netlify-cms-proxy-server",
+    "start:eleventy": "npx @11ty/eleventy --serve",
+    "start:postcss": "postcss src/_includes/css/*.css --dir _site --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-img": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^5.1.15",
+    "jsdom": "^21.1.1",
     "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
     "tailwindcss": "^3.2.7"
   }
 }
