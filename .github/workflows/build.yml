@@ -5,14 +5,16 @@ on:
     branches:
       - main
 
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  # do not cancel in-progress deployments so that the target directory is not corrupted nor partially updated.
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-
+    
     steps:
       - uses: actions/checkout@v3
 
@@ -21,24 +23,17 @@ jobs:
           node-version: 18
           cache: npm
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm install
 
       - name: Build
-        run: |
-          npm install
-          npm run build
+        run: npm run build
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          publish_dir: ./build
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          enable_jekyll: false
-          cname: www.brandhof.net
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_LOGIN }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./_site/
+          server-dir: ${{ env.FTP_DIR }}
