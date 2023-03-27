@@ -74,7 +74,7 @@ async function optimizeImage(imgDom) {
   //  both of them.
   let metadata = await pluginImage(sourcePath, {
     widths: widths || ["auto"],
-    formats: ["webp", "auto"],
+    formats: ["jpeg", "webp", "auto"],
     outputDir: outputDir,
     urlPath: urlPath,
     filenameFormat: function (id, src, width, format, options) {
