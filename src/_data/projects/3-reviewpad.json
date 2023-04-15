@@ -1,6 +1,7 @@
 {
   "key": "3. reviewpad",
 	"name": "Reviewpad",
+  "active": true,
 	"url_en": "https://reviewpad.com/",
 	"url_fr": "https://reviewpad.com/",
 	"title_en": "[Reviewpad](https://reviewpad.com/) speeds up, secures, and automates your code review process.",

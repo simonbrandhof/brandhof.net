@@ -1,13 +1,11 @@
 {
 	"en": {
-		"contributions": "my contributions",
-		"fandfs": "friends & family",
+		"involvements": "my involvements",
 		"language": "English",
 		"copyright": "Image copyrights to Bloom association, Shematic, Reviewpad and Revival."
 	},
 	"fr": {
-		"contributions": "mes contributions",
-		"fandfs": "mon entourage",
+		"involvements": "mes engagements",
 		"language": "Français",
 		"copyright": "Images sous copyright par l'association Bloom, Shematic, Reviewpad et Revival."
 	}

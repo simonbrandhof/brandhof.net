@@ -1,6 +1,7 @@
 {
 	"key": "1. revival",
 	"name": "Revival",
+  "active": false,
 	"url_en": "https://www.impacte.capital/",
 	"url_fr": "https://www.impacte.capital/",
 	"title_en": "[Revival](https://www.impacte.capital/) recycles plastics and rubbers from unsealable or used shoes.",

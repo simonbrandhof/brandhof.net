@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-	.contribution a {
+	.involvement-active a {
 		@apply py-0.5 px-0.5 bg-orange-500 text-black underline decoration-1 hover:decoration-double;
 	}
 
-	.fandf a {
+	.involvement-passive a {
 		@apply py-0.5 px-0.5 bg-yellow-500 text-black underline decoration-1 hover:decoration-double;
 	}
 }

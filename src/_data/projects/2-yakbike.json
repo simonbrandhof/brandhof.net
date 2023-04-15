@@ -1,6 +1,7 @@
 {
   "key": "2. yakbike",
 	"name": "Yakbike",
+  "active": true,
   "url_en": "https://yakbike.ch",
   "url_fr": "https://yakbike.ch",
   "title_en": "More than a van, the [Yakbike](https://yakbike.ch). The new-generation electric cargo-bike.",
