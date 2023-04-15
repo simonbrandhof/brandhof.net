@@ -7,9 +7,9 @@ layout: layouts/skeleton.njk
       simon<br>
       <span class="text-green-700">brandhof</span>
 		</header>
-		<div class="lg:flex-grow">
-			
-		</div>
+    <div class="text-xl lg:flex-grow print:hidden px-6 lg:px-10">
+      {{ messages[page.lang].overview }}
+    </div>
 		<footer class="max-lg:fixed max-lg:bottom-0 max-lg:bg-stone-800 max-lg:py-4 max-lg:w-full print:hidden p-6 lg:p-10">
 			<div class="flex flex-row gap-3">
 				<div>
