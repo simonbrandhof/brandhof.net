@@ -1,7 +1,7 @@
 {
   "key": "3. magic tomato",
   "name": "Magic Tomato",
-  "active": false,
+  "active": true,
   "url_en": "https://welcome.magictomato.ch",
   "url_fr": "https://welcome.magictomato.ch",
   "title_en": "The best fresh products from Switzerland delivered the same day by [Magic Tomato](https://welcome.magictomato.ch/).",
