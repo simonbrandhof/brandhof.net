@@ -31,6 +31,12 @@ jobs:
 
       - name: Build
         run: npm run build
+        
+      - name: Debug
+        run: |
+          pwd
+          ls -alF
+          echo ${{ github.workspace }} 
 
       - name: Deploy
         uses: cpina/github-action-push-to-another-repository@v1.7.2
