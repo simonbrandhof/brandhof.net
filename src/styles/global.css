@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-darkgray: #1E1E1E;
+  --color-lightgray: #888888;
+  --color-mediumgray: #FFFFFF14;
+  --color-redwine: #955264;
+  --font-serif: var(--font-merriweather), Times, serif;
+}
+
+.button {
+  @apply block py-1 px-4 text-white bg-mediumgray rounded-md;
+
+  &:hover {
+    @apply bg-mediumgray/50 cursor-pointer;
+  }
+}
+
+.link {
+  @apply underline text-white hover:decoration-double;
+}

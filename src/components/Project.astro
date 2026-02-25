@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  alt: string;
+  image: ImageMetadata;
+  url: string;
+}
+
+const { alt, image, url } = Astro.props;
+---
+
+<li class="flex flex-col md:flex-row items-top gap-4">
+  <a href={url} class="block shrink-0">
+    <Image
+      src={image}
+      alt={alt}
+      width={1280}
+      height={853}
+      sizes="(min-width: 768px) 128px, 100vw"
+      class="block w-screen max-w-none md:w-52 shrink-0 object-cover aspect-3/2"
+    />
+  </a>
+  <div class="px-4 md:px-0 text-lg">
+    <slot />
+  </div>
+</li>
