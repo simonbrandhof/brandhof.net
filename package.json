@@ -8,6 +8,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.2.1",
